@@ -14,10 +14,10 @@
 
 // To find number of bytes required to represent a given
 // decimal ascii value as a string in binary
-int	highest_bit(int dec_val)
+int		highest_bit(int dec_val)
 {
-	int	num_bits;
-	int	bits_from_0;
+	int		num_bits;
+	int		bits_from_0;
 
 	num_bits = 0;
 	bits_from_0 = dec_val;
@@ -33,13 +33,13 @@ int	highest_bit(int dec_val)
 // without re-allocating memory and without overwriting
 // VALUE CONVERSATION AND RECURSION MAY ALSO BE OFF - LETS PAIR
 // ON THIS TOMORROW
-int	*ascii_char_to_bin_str(unsigned int ascii_val)
+int		*ascii_char_to_bin_str(unsigned int ascii_val)
 {
-	int	*array;
-	int	farthest_bit;
-	int	i;
-	int	input1;
-	int	input2;
+	int		*array;
+	int		farthest_bit;
+	int		i;
+	int		input1;
+	int		input2;
 
 	i = 0;
 	input2 = -1;
@@ -73,7 +73,7 @@ int	*ascii_char_to_bin_str(unsigned int ascii_val)
 char	**text_to_bin_str(char *str)
 {
 	char	**binary_strings;
-	int	num_chars;
+	int		num_chars;
 
 	num_chars = strlen(str);
 	binary_strings = (char **)malloc(sizeof(char *) * num_chars + 1);
@@ -84,10 +84,4 @@ char	**text_to_bin_str(char *str)
 		str++;
 	}
 	return (binary_strings);
-}
-
-int	main(int argc, char **argv)
-{
-	//To do: Write test
-	return (0);
 }
