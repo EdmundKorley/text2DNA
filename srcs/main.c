@@ -11,9 +11,13 @@ int		main(int argc, char **argv)
 		argv++;
 		while (*argv)
 		{
-			printf("Input: %s\n", *argv);
+			printf("Input: %s\nOutput (bit matrix):\n", *argv);
 			result = text_to_bin_str(*argv);
-			printf("First character's binary output: %s\n\n", *result);
+			while (*result)
+			{
+				printf("%s\n", *result);
+				result++;
+			}
 			argv++;
 		}
 	}

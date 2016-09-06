@@ -6,7 +6,9 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#define ASCIIBITLEN 8
 
-char    **text_to_bin_str(char *str);
+char	**text_to_bin_str(char *str);
+void	ft_revstr(char *str);
 
 #endif
