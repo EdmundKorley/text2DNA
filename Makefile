@@ -1,7 +1,6 @@
-EXEC: encode
-FILES: main
-SRCS: {$(FILES)}.c
-OBJECTS: {$(FILES)}.o
+EXEC		= encode
+SRCS		= srcs/*.c
+OBJECTS		= *.o
 
 all:
 	gcc -Wall -Wextra -Werror -I./includes -c $(SRCS)
