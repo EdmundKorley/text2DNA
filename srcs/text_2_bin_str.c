@@ -33,6 +33,8 @@ int		highest_bit(int dec_val)
 // without re-allocating memory and without overwriting
 // VALUE CONVERSATION AND RECURSION MAY ALSO BE OFF - LETS PAIR
 // ON THIS TOMORROW
+// EMK 12:18PM: We need to have this return a string,
+// the casting to char * type will be easier here.
 int		*ascii_char_to_bin_str(unsigned int ascii_val)
 {
 	int		*array;
@@ -49,7 +51,7 @@ int		*ascii_char_to_bin_str(unsigned int ascii_val)
 	{
 		if (ascii_val < 2)
 		{
-			inptut1 = (int)ascii_val;
+			input1 = (int)ascii_val;
 			*(array + i) = input1;
 			if (input2 >= 0)
 			{
@@ -74,7 +76,9 @@ char	**text_to_bin_str(char *str)
 {
 	char	**binary_strings;
 	int		num_chars;
+	int		i;
 
+	i = 0;
 	num_chars = strlen(str);
 	binary_strings = (char **)malloc(sizeof(char *) * num_chars + 1);
 	while (str)
