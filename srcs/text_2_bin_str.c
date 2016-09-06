@@ -10,16 +10,7 @@
 //  binary representations quickly overflow the number of
 //  places an int type in C can handle.
 
-int	ft_strlen(char *str)
-{
-	int	len;
-	
-	len = 0;
-	while (*str++)
-		len++;
-	return (len);
-}
-
+#include "text2dna.h"
 
 // To find number of bytes required to represent a given
 // decimal ascii value as a string in binary
@@ -84,7 +75,7 @@ char	**text_to_bin_str(char *str)
 	char	**binary_strings;
 	int	num_chars;
 
-	num_chars = ft_strlen(str);
+	num_chars = strlen(str);
 	binary_strings = (char **)malloc(sizeof(char *) * num_chars + 1);
 	while (str)
 	{
