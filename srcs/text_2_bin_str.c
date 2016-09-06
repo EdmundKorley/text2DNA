@@ -87,5 +87,6 @@ char	**text_to_bin_str(char *str)
 		i++;
 		str++;
 	}
+	*(binary_strings + i) = '\0';
 	return (binary_strings);
 }
