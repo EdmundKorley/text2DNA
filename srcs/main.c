@@ -12,7 +12,7 @@ int		main(int argc, char **argv)
 		while (*argv)
 		{
 			printf("Input: %s\nOutput (bit matrix):\n", *argv);
-			result = text_to_bin_str(*argv);
+			result = text_to_base4_str(*argv);
 			while (*result)
 			{
 				printf("%s\n", *result);

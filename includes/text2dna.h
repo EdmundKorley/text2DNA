@@ -6,9 +6,9 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#define ASCII_BITS_MAXLEN 7 // E.G. 127 is 111111 (7 digits)
+#define ASCII_BASE7_MAXLEN 4 // E.G. 127 is 1333 (4 digits)
 
-char	**text_to_bin_str(char *str);
+char	**text_to_base4_str(char *str);
 void	ft_revstr(char *str);
 char	*ft_leftpad(char *str, char pad, int width);
 
