@@ -42,7 +42,7 @@ char	*ascii_to_bin(int ascii)
 	bin = 0;
 	i = 1;
 	j = 0;
-	bit_str = malloc(ASCIIBITLEN);
+	bit_str = malloc(ASCII_BITS_MAXLEN);
 	while (ascii)
 	{
 		leftover = ascii % 2;
@@ -54,5 +54,6 @@ char	*ascii_to_bin(int ascii)
 	}
 	bit_str[j] = '\0';
 	ft_revstr(bit_str);
+	bit_str = ft_leftpad(bit_str, '0', ASCII_BITS_MAXLEN);
 	return (bit_str);
 }
