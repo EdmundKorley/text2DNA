@@ -45,8 +45,8 @@ char	*ascii_to_base4(int ascii)
 	base4_str = malloc(ASCII_BASE7_MAXLEN + 1); // This needs to be an even # for the triplet conversion (sans \0).
 	while (ascii)
 	{
-		leftover = ascii % 4;
-		ascii /= 4;
+		leftover = ascii % BASE;
+		ascii /= BASE;
 		base4 = base4 + (leftover * i);
 		base4_str[j] = leftover + '0';
 		j++;
