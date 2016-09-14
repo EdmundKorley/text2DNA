@@ -8,7 +8,7 @@ char	*ascii_to_base4(int ascii);
 ** where each row is the base-7 equivalent of a given
 ** character's ASCII value.
 */
-char	**text_to_base4_str(char *str)
+char	**text_to_base4(char *str)
 {
 	int		i;
 	int		len;
@@ -42,7 +42,7 @@ char	*ascii_to_base4(int ascii)
 	base4 = 0;
 	i = 1;
 	j = 0;
-	base4_str = malloc(ASCII_BASE7_MAXLEN + 1); // This needs to be an even # for the triplet conversion (sans \0).
+	base4_str = malloc(ASCII_BASE4_MAXLEN + 1); // This needs to be an even # for the triplet conversion (sans \0).
 	while (ascii)
 	{
 		leftover = ascii % BASE;
@@ -54,6 +54,6 @@ char	*ascii_to_base4(int ascii)
 	}
 	base4_str[j] = '\0';
 	ft_revstr(base4_str);
-	base4_str = ft_leftpad(base4_str, '0', ASCII_BASE7_MAXLEN);
+	base4_str = ft_leftpad(base4_str, '0', ASCII_BASE4_MAXLEN);
 	return (base4_str);
 }
