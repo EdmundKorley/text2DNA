@@ -5,22 +5,19 @@
 int		main(int argc, char **argv)
 {
 	char	**result;
+	int		rows;
 
 	if (argc > 1)
 	{
 		argv++;
 		while (*argv)
 		{
-			printf("Input: %s\nOutput (bit matrix):\n", *argv);
-			result = text_to_bin_str(*argv);
-			while (*result)
-			{
-				printf("%s\n", *result);
-				result++;
-			}
+			result = text_to_dna(*argv);
+			rows = ft_matrix_rows(result);
+			ft_traverse_matrix(result, rows, &ft_putcharstar);
 			argv++;
 		}
 	}
-	printf("\n");
+	write(1, "\n", 1);
 	return (0);
 }

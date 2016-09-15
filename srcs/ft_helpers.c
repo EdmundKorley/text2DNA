@@ -47,3 +47,43 @@ char	*ft_leftpad(char *str, char pad, int width)
 	}
 	return (str);
 }
+
+// Traverses a two-2d (char **) matrix and calls a callback function
+// that manipulates char in-place.
+void	ft_traverse_matrix(char **matrix, int rows, void callback(char *))
+{
+	int		i;
+	char	*row;
+
+	i = 0;
+	while (i < rows)
+	{
+		row = matrix[i];
+		while (*row) {
+			callback(row);
+			row++;
+		}
+		i++;
+	}
+}
+
+// Get num of rows for matrix
+int		ft_matrix_rows(char **matrix)
+{
+	int		len;
+
+	len = 0;
+	while (*matrix)
+	{
+		len++;
+		matrix++;
+	}
+	return (len);
+}
+
+// Print a char,
+// given its address
+void	ft_putcharstar(char *letter)
+{
+	write(1, letter, 1);
+}
