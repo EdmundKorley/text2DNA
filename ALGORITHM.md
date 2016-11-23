@@ -9,12 +9,3 @@ But nature, given millions of years of evolution, has fine-tuned its owned compr
 There are three distinct steps:
 
 ![DNA encoding schemes](http://www.nature.com/polopoly_fs/7.38631.1472212682!/image/DNA_storage_graphic_WEB.jpg_gen/derivatives/landscape_630/DNA_storage_graphic_WEB.jpg)
-
-1. Text to binary code
-
-2. Binary to triplet code
-
-3. Triplets to DNA code
-
-4. DNA framents
-
