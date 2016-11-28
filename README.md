@@ -5,7 +5,7 @@ A small service to encode input as DNA 🐛
 Run `make encode`, in the project root, to compile the executable `encode`, then pass in strings as command-line arguments to see their DNA encoded version.
 
 ```sh
-# cd text2dna/
+$ cd text2dna/
 $ make encode
 $ ./encode "DNA is nature's DropBox."
 CACACATGCAACAGAACGGCCTATAGAACGTGCGACCTCACTCCCTAGCGCCAGCTCTATAGAACACACTAGCGTTCTAACAAGCGTTCTGAAGTG
