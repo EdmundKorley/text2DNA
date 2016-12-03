@@ -1,4 +1,4 @@
-# text2dna
+# text2DNA
 
 A small service to encode input as DNA 🐛
 
